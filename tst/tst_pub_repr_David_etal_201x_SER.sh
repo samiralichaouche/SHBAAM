@@ -235,7 +235,7 @@ if (("$unt" >= "$fst")) && (("$unt" <= "$lst")) ; then
 echo "Running unit test $unt/x"
 
 echo 
-python ../src/shbaam_ldas.py VIC 2000-01-01T00:00:00 2000-06-01T00:00:00 ../input/GLDAS/.
+../src/shbaam_ldas.py VIC 2000-01-01T00:00:00 2000-06-01T00:00:00 ../input/GLDAS/
 fi
 
 #*******************************************************************************
