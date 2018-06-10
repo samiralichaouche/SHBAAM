@@ -36,6 +36,7 @@ env:
 #Before installing SHBAAM
 #*******************************************************************************
 before_install:
+- echo -e "urs.earthdata.nasa.gov\n  login salichao@uci.edu\n  password $CI_USER_PASSWORD" >> ~/.netrc
 
 #-------------------------------------------------------------------------------
 #Specific to Linux
