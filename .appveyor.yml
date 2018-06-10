@@ -26,6 +26,8 @@ image:
 #Environment variables for different tests on multiple AppVeyor workers
 #*******************************************************************************
 environment:
+  ci_user_password:
+    secure: tm75eKllwolkg4o/C+8w5A==
   matrix:
     - TST_PUB_DWNL: 'tst_pub_dwnl_David_etal_201x_SER.sh'
       TST_PUB_REPR: 'tst_pub_repr_David_etal_201x_SER.sh'
@@ -39,8 +41,8 @@ install:
   - ps: choco install --no-progress ((gc requirements.cho) -notmatch '^#' -match '\S')
   - ps: $ENV:PATH="C:\\ProgramData\\MiniConda2;C:\\ProgramData\\MiniConda2\\Scripts;$ENV:PATH"
   - ps: $ENV:PATH="C:\\Program Files (x86)\\GnuWin32\\bin;$ENV:PATH"
-
-
+  - ps: set-content ~/.netrc "machine urs.earthdata.nasa.gov login salichao@uci.edu password $env:ci_user_password"
+  - ps: cp ~/.netrc ~/_netrc
 #*******************************************************************************
 #Installing SHBAAM
 #*******************************************************************************
