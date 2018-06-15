@@ -30,7 +30,7 @@ sut:
      #is generated automatically based on the folder where docker-compose is run
      #(shbaam) and the service name (sut, i.e. 'system under test')
      command:  echo -e "machine $MACHINE_NETRC\n  login $LOGIN_NETRC\n  password $PASSWORD_NETRC" >> ~/.netrc
-	       bash -xc "cd ./tst/;"\
+               bash -xc "cd ./tst/;"\
                        "./tst_pub_dwnl_David_etal_201x_SER.sh;"\ 
                        "./tst_pub_repr_David_etal_201x_SER.sh"
      #bash -c (string) allows to make the code more readable here
