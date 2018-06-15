@@ -36,9 +36,9 @@ sut:
      #bash -c (string) allows to make the code more readable here
      #bash -x (verbose) allows to make the commands more readable at runtime
      environment:
-	- LOGIN_NETRC
-	- MACHINE_NETRC
-	- PASSWORD_NETRC
+        - LOGIN_NETRC
+        - MACHINE_NETRC
+        - PASSWORD_NETRC
 
 
 #*******************************************************************************
